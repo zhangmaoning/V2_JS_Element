@@ -173,3 +173,134 @@ q:after {
   visibility: hidden;
   height: 0;
 }
+/* iconfont css */
+@font-face {
+  font-family: 'iconfont';
+  src: url('./font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('./font/iconfont.woff2') format('woff2'),
+      url('./font/iconfont.woff') format('woff'),
+      url('./font/iconfont.ttf') format('truetype'),
+      url('./font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+/* 列了一部分举例 */
+.iconDesert-34:before {
+  content: "\e649";
+}
+.iconDesert-:before {
+  content: "\e627";
+}
+.iconDesert-1:before {
+  content: "\e628";
+}
+.iconDesert-2:before {
+  content: "\e629";
+}
+.iconDesert-3:before {
+  content: "\e62a";
+}
+.iconDesert-4:before {
+  content: "\e62b";
+}
+.iconDesert-5:before {
+  content: "\e62c";
+}
+.iconDesert-6:before {
+  content: "\e62d";
+}
+.iconDesert-7:before {
+  content: "\e62e";
+}
+.iconDesert-8:before {
+  content: "\e62f";
+}
+.iconDesert-9:before {
+  content: "\e630";
+}
+.iconDesert-10:before {
+  content: "\e631";
+}
+.iconDesert-11:before {
+  content: "\e632";
+}
+.iconDesert-12:before {
+  content: "\e633";
+}
+.iconDesert-13:before {
+  content: "\e634";
+}
+.iconDesert-14:before {
+  content: "\e635";
+}
+.iconDesert-15:before {
+  content: "\e636";
+}
+.iconDesert-16:before {
+  content: "\e637";
+}
+.iconDesert-17:before {
+  content: "\e638";
+}
+.iconDesert-18:before {
+  content: "\e639";
+}
+.iconDesert-19:before {
+  content: "\e63a";
+}
+.iconDesert-20:before {
+  content: "\e63b";
+}
+.iconDesert-21:before {
+  content: "\e63c";
+}
+.iconDesert-22:before {
+  content: "\e63d";
+}
+.iconDesert-23:before {
+  content: "\e63e";
+}
+.iconDesert-24:before {
+  content: "\e63f";
+}
+.iconDesert-25:before {
+  content: "\e640";
+}
+.iconDesert-26:before {
+  content: "\e641";
+}
+.iconDesert-27:before {
+  content: "\e642";
+}
+.iconDesert-28:before {
+  content: "\e643";
+}
+.iconDesert-29:before {
+  content: "\e644";
+}
+.iconDesert-30:before {
+  content: "\e645";
+}
+.iconDesert-31:before {
+  content: "\e646";
+}
+.iconDesert-32:before {
+  content: "\e647";
+}
+.iconDesert-33:before {
+  content: "\e648";
+}
+/*iconfont svg */
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
