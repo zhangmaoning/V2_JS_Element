@@ -1,8 +1,10 @@
 //核心概念1: State
 //就是Vuex中的公共的状态, 我是将state看作是所有组件的data, 用于保存所有组件的公共数据.
 export default {
-  language: 1,
   username: "我爱蓝色的猪",
+  vuecommit:"",
+  vuedispatch:"",
+  actiondispatch:"",
   newList: [
     {
       keyword: "清明节全国哀悼",

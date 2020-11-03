@@ -14,7 +14,7 @@
         @click="goHome"
       ></el-button>
     </div>
-    <h1>欢迎来到小猪猪的世界~~~</h1>
+    <h1>欢迎来到小猪猪的世界~~~中国加油</h1>
   </div>
 </template>
 

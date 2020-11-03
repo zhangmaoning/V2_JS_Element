@@ -16,14 +16,35 @@
           <h4>vuex数据存储</h4>
           <ul style="text-align:left;">
             <li>
-              方法一：Mutations.js；{{getUserName}}
-              <br />将"我爱蓝色的猪"更改为“肖战”
-              <el-button plain type="success" size="mini" @click="getUserName1">同步存值</el-button>
+              方法一：vue_commit:{{$store.state.vuecommit}}
+              <br />
+              <el-button
+                plain
+                type="success"
+                size="mini"
+                @click="getUserName1"
+              >异步存值commit(vue组件存值)（{{time1}}s）</el-button>
             </li>
             <li>
-              方法二: Action.js：{{getUserName}}
-              <br />将"我爱蓝色的猪"或"肖战"更改为“王一博”
-              <el-button plain type="warning" size="mini" @click="getUserName2">异步存值（{{time}}s）</el-button>
+              方法二: vue_dispatch：{{$store.state.vuedispatch}}
+              <br />
+              <el-button
+                plain
+                type="warning"
+                size="mini"
+                @click="getUserName2"
+              >异步存值dispatch(vue组件存值)（{{time2}}s）</el-button>
+            </li>
+          </ul>
+        </el-card>
+      </el-col>
+      <el-col :span="6">
+        <el-card>
+          <ul>
+            <li>
+              方法三: Action.js： {{$store.state.constant}}
+              <br />
+              <el-button plain type="warning" size="mini">异步存值(action.js组件存值)</el-button>
             </li>
           </ul>
         </el-card>
@@ -33,7 +54,6 @@
 </template>
 
 <script>
-import * as types from '@/store/constant.js'
 export default {
   data() {
     return {
@@ -42,9 +62,8 @@ export default {
         type: 'Vuex',
         tips: 'Vuex的使用'
       },
-      newUserName: '肖战',
-      newUserName2: '王一博',
-      time: 5
+      time1: 5,
+      time2: 5
     }
   },
   computed: {
@@ -56,34 +75,34 @@ export default {
       return this.$store.getters.getUserName
     }
   },
-  watch: {
-    username: {
-      handler(newVal, oldVal) {
-        this.time = newVal == '王一博' ? 0 : 5
-      }
-    }
-  },
+  watch: {},
   created() {
-    this.newList = this.$store.state.newList
+    this.$store.dispatch(this.$types.GET_CONSTANT)
   },
   methods: {
-    // 同步存值:commit
     getUserName1() {
-      if (this.username == '肖战') return
-      this.$store.commit(types.SET_USERNAME, this.newUserName)
-    },
-    // 异步存值:dispatch
-    // 可以在dispatch的时候异步，也可以在组件内commit的时候异步；
-    getUserName2() {
-      if (this.username == '王一博') return
+      // 异步存值:commit
       //计时器
       let timer = setInterval(() => {
-        if (this.time >= 0) {
-          this.time--
+        if (this.time1 >= 0) {
+          this.time1--
         }
-        if (this.time == 0) {
+        if (this.time1 == 0) {
           clearInterval(timer)
-          this.$store.dispatch(types.SET_USERNAME, this.newUserName2)
+          this.$store.commit(this.$types.GET_VUECOMMIT, '小飞侠')
+        }
+      }, 1000)
+    },
+    getUserName2() {
+      // 异步存值:dispatch
+      //计时器
+      let timer = setInterval(() => {
+        if (this.time2 >= 0) {
+          this.time2--
+        }
+        if (this.time2 == 0) {
+          clearInterval(timer)
+          this.$store.dispatch(this.$types.GET_VUEDISPATCH, '常量数据2')
         }
       }, 1000)
     }

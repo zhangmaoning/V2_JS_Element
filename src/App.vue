@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import "@/assets/css/fontsvg/iconfont.js"
 export default {
   name: "App"
 };

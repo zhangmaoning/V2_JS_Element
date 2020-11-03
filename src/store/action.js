@@ -6,12 +6,13 @@
 // 可以在commit的时候异步，也可以在组件内dispatch的时候异步；
 import * as types from "./constant.js";
 const actions = {
-  [types.SET_USERNAME](context, data) {
-  // [types.SET_USERNAME]({commit}, data) {
-    // setTimeout(() => {
-      context.commit(types.SET_USERNAME, data);
-      // commit(types.SET_USERNAME, data);
-    // }, 5000);
+  [types.GET_VUEDISPATCH](context, data) {
+      context.commit(types.GET_VUEDISPATCH, data);
   },
+  [types.GET_CONSTANT]({commit}, data) {
+    setTimeout(() => {
+      commit(types.GET_CONSTANT, "常量数据1");
+    }, 5000);
+  }
 };
 export default actions;

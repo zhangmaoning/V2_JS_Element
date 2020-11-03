@@ -5,6 +5,15 @@ import * as types from "./constant.js";
 const matutaions = {
   [types.SET_USERNAME]:(state,payload)=>{
 		state.username=payload;
-	}
+	},
+	[types.GET_CONSTANT]:(state,payload)=>{
+		state.constant=payload;
+	},
+	[types.GET_VUECOMMIT]:(state,payload)=>{
+		state.vuecommit=payload;
+	},
+	[types.GET_VUEDISPATCH]:(state,payload)=>{
+		state.vuedispatch=payload;
+	},
 };
 export default matutaions;
