@@ -24,6 +24,8 @@ import axios from "axios";
 Vue.prototype.$api = axios;
 // vuex的使用
 import store from "./store/index.js";
+import * as types from "./store/constant.js";
+Vue.prototype.$types = types;
 // vue封装的公共组件
 import TableModel from "@/components/TableModel";
 import Header from "@/components/Header";
