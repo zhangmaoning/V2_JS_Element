@@ -12,8 +12,11 @@
   "dependencies": {
     "awe-dnd": "^0.3.4",
     "axios": "^0.19.2",
+    "dayjs": "^1.10.3",
     "element-ui": "^2.13.0",
+    "jquery": "^3.5.1",
     "mockjs": "^1.1.0",
+    "vee-validate": "^3.4.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-slicksort": "^1.1.3",

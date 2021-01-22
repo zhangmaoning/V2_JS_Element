@@ -1,26 +1,15 @@
 <template>
-  <div class="content">
-    <div class="tip">
-      <span>
-        <i class="el-icon-location-outline icon"></i>
-        <span>{{btnInfo.tips}}</span>
-      </span>
-      <el-button
-        v-if="btnInfo.tips!='首页'"
-        size="mini"
-        type="success"
-        icon="el-icon-s-home "
-        circle
-        @click="goHome"
-      ></el-button>
-    </div>
-    <h1>欢迎来到小猪猪的世界~~~中国加油</h1>
+  <div class="tip">
+    <span>
+      <i class="el-icon-location-outline icon"></i>
+      <span>{{$store.state.headerInfo}}</span>
+    </span>
+    <h1>欢迎来到小猪猪的世界~~</h1>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['btnInfo'],
   data() {
     return {}
   },
@@ -36,14 +25,19 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  padding: 20px;
-}
 .tip {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   color: #222;
 }
+.tip span {
+  flex-basis: 15%;
+}
+.tip h1 {
+  flex: 1;
+  text-align: center;
+}
+
 .icon {
   font-size: 20px;
   color: #0612f8;

@@ -4,7 +4,6 @@
   可以支持水平，垂直或者网格的拖拽。支持触摸。-->
   <!-- https://segmentfault.com/a/1190000013090341 -->
   <div class="root">
-    <headertop :btnInfo="btnInfo" />
     <h4>vue-slicksort</h4>
     <SortableList axis="y" v-model="items" class="list">
       <SortableItem
@@ -44,9 +43,6 @@ export default {
   },
   data() {
     return {
-      btnInfo: {
-        tips: 'vue拖拽插件之slicksort'
-      },
       items: [
         'Item 1',
         'Item 2',

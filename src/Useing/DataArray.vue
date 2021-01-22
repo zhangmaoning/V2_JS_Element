@@ -1,6 +1,5 @@
 <template>
   <div>
-    <headertop :btnInfo="btnInfo"/>
     TODO
     
   </div>

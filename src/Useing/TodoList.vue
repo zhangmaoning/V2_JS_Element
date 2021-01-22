@@ -1,6 +1,5 @@
 <template>
   <div class="todolist">
-    <headertop :btnInfo="btnInfo" />
     监听路由跳转的参数：name-{{ name }};row-{{ row }}
     <el-row :gutter="20">
       <el-col :span="12" :offset="6">
@@ -30,11 +29,6 @@ export default {
   name: 'TodoList',
   data() {
     return {
-      // 组件headertop的数据：
-      btnInfo: {
-        type: 'TodoList',
-        tips: '监听路由的变化：'
-      },
       inputValue: '',
       todolist: [],
       // 路由参数

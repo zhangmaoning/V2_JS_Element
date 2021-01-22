@@ -1,24 +1,37 @@
 <template>
-  <el-table ref="table" style="width: 100%;" class="tableclass" :empty-text="tableOther.emptytext">
+  <el-table
+    ref="multipleTable"
+    style="width: 100%;"
+    class="tableclass"
+    :empty-text="tableOther.emptytext"
+    :data="tableData"
+    :row-class-name="rowClassName"
+    :row-style="rowStyle"
+  >
+    <!-- :current-row-key="currentRowKey" -->
+    <!-- :highlight-current-row="highlightCurrentRow" -->
+    <!-- :show-header="showHeader" -->
     <!-- :height="tableOther.height"
     :max-height="tableOther.maxHeight"
     :stripe="tableOther.stripe"
     :border="tableOther.border"
     :size="tableOther.size"
     :fit="tableOther.fit"
-    :show-header="tableOther.showHeader"
-    :highlight-current-row="tableOther.highlightCurrentRow"
-    :current-row-key="tableOther.currentRowKey"
-    :row-class-name="rowClassName"
-    :row-style="tableOther.rowStyle"
-    :data="tableData"-->
+    -->
     <!-- 
     :default-expand-all="tableOther.defaultExpandAll"
     default-expand-all-->
-    <el-table-column type="selection" width="55"></el-table-column>
-    <el-table-column label="日期" width="120">
-      <template slot-scope="scope">{{ scope.row.date }}</template>
-    </el-table-column>
+    <el-table-column type="selection" width="55" v-if="tableOther.ischeckbox"></el-table-column>
+    <div v-for="(item,index) in tableHeader" :key="index">
+      <el-table-column v-if="item.isIcon" :label="item.title" width="120">
+        <template>
+          <span v-for="(val,i) in item.positation" :key="i">
+            <i :class="val.icon"></i>
+            <span>{{val.tips}}</span>
+          </span>
+        </template>
+      </el-table-column>
+    </div>
     <el-table-column prop="name" label="姓名" width="120"></el-table-column>
     <el-table-column prop="address" label="地址" show-overflow-tooltip></el-table-column>
   </el-table>
@@ -38,10 +51,14 @@ export default {
     this.getTableData()
   },
   methods: {
+    showHeader() {},
+    currentRowKey() {},
+    highlightCurrentRow() {},
+    rowStyle() {},
     // row-class-name
     rowClassName({ row, rowIndex }) {
       if (row.date === '2016-05-02') {
-        console.log(row.date, '王一博', data.rowIndex)
+        console.log(row.date, '王一博')
         return 'info-row'
       } else if (row.date === '2016-05-03') {
         return 'positive-row'

@@ -15,5 +15,8 @@ const matutaions = {
 	[types.GET_VUEDISPATCH]:(state,payload)=>{
 		state.vuedispatch=payload;
 	},
+	[types.HEADER_INFO]:(state,payload)=>{
+		state.headerInfo=payload;
+	},
 };
 export default matutaions;

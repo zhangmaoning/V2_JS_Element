@@ -17,6 +17,10 @@ Vue.prototype.$vva=validate;
 // 拖拽插件
 import VueDND from "awe-dnd";
 Vue.use(VueDND);
+import 'jquery';
+// 日期时间处理插件
+import dayjs from "dayjs";
+Vue.prototype.dayjs = dayjs;
 // mock数据
 import "../src/assets/mock/mock.js";
 import "../src/assets/mock/data.js";
@@ -28,10 +32,13 @@ import * as types from "./store/constant.js";
 Vue.prototype.$types = types;
 // vue封装的公共组件
 import TableModel from "@/components/TableModel";
+import LeftBars from "@/components/LeftBars";
 import Header from "@/components/Header";
 Vue.component("tablemodel", TableModel);
+Vue.component("leftbars", LeftBars);
 Vue.component("headertop", Header);
 
+store.dispatch(types.GET_CONSTANT,"min.js")
 // event-bus:处理组件之间的数据传递
 // import { eventBus } from './event-bus.js'
 // var EventBus = new Vue();
@@ -43,6 +50,12 @@ Vue.component("headertop", Header);
 //   }
 // });
 Vue.config.productionTip = false;
+
+// 导入插件
+import "@/components/Loading/index.css";
+import Loading from "@/components/Loading/index.js";
+Vue.use(Loading);
+
 /* eslint-disable no-new */
 new Vue({
   el: "#app",

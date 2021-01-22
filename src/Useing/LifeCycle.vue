@@ -1,6 +1,6 @@
 <template>
   <div>
-    <headertop :btnInfo="btnInfo" />{{testInfo}}
+  {{testInfo}}
     <el-button type="danger" round @click="Updatapage">页面更新一下</el-button>
   </div>
 </template>
@@ -9,9 +9,6 @@ export default {
   name: 'LifeCycle',
   data() {
     return {
-      btnInfo: {
-        tips: 'vue生命周期'
-      },
       testInfo: '生命周期更新前'
     }
   },

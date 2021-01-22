@@ -1,7 +1,6 @@
 <template>
   <!-- vue slot插槽的使用 -->
   <div class="slotclass">
-    <headertop :btnInfo="btnInfo" />
     <h4>slot 父组件</h4>
     <SlotComponents :infoData="infoData">
       匿名插槽： 没有命名的slot会显示这行字吗？？
@@ -32,11 +31,6 @@ export default {
   components: { SlotComponents },
   data() {
     return {
-      // 组件headertop的数据：
-      btnInfo: {
-        type: 'Slot',
-        tips: 'Slot插槽的使用'
-      },
       infoData: {
         title: '人物列表:  欢迎大家来到王者峡谷~~ 这个里面是props传参',
         array: ['name', 'region', 'office']

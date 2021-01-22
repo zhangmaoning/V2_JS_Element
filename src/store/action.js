@@ -11,7 +11,8 @@ const actions = {
   },
   [types.GET_CONSTANT]({commit}, data) {
     setTimeout(() => {
-      commit(types.GET_CONSTANT, "常量数据1");
+      commit(types.GET_CONSTANT, data);
+      console.log(data,"张毛宁");
     }, 5000);
   }
 };

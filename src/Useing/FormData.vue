@@ -1,6 +1,5 @@
 <template>
   <div>
-    <headertop :btnInfo="btnInfo" />
     <h4>form_model使用(竖型)</h4>
     <el-container>
       <el-main>
@@ -23,9 +22,6 @@ export default {
   components: { FromModel },
   data() {
     return {
-      btnInfo: {
-        tips: '表单组件的使用'
-      },
       formInfo: {
         type: 'FormComponentUser',
         detail: {

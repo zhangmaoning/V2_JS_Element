@@ -5,7 +5,6 @@
 
   <div class="color-list">
     TODO
-    <headertop :btnInfo="btnInfo" />
     <h4>vue-dragging awe-dnd</h4>
     <div
       v-for="color in colors"
@@ -24,10 +23,6 @@ export default {
   name: 'Move2',
   data() {
     return {
-      // 组件headertop的数据：
-      btnInfo: {
-        tips: 'vue拖拽插件之Awednd'
-      },
       fs: '30px',
       colors: [
         {

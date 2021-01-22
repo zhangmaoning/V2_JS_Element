@@ -22,4 +22,13 @@ const arrayDemo =function getArray() {
   }
   return {data:arraydemo}
 } 
-export { todoList,arrayDemo};
+const user={
+  id:"@id()",//得到的随机ID，对象
+  username:"@cname()",//随机生成中文名字
+  date:"@date('yyyy-MM-dd')",//随机生成日期
+  avatar:"@image('200*200','red','#fff','avatar)",//随机生成图片地址
+  description:"@paragraph()",//描述
+  ip:"@ip()",//IP地址
+  email:"@email()"//email
+}
+export {user, todoList,arrayDemo};

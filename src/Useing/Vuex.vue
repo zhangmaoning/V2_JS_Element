@@ -1,6 +1,5 @@
 <template>
   <div class="vuexclass">
-    <headertop :btnInfo="btnInfo" />
     <el-row :gutter="20">
       <el-col :span="6">
         <el-card>
@@ -57,11 +56,6 @@
 export default {
   data() {
     return {
-      // 组件headertop的数据：
-      btnInfo: {
-        type: 'Vuex',
-        tips: 'Vuex的使用'
-      },
       time1: 5,
       time2: 5
     }
@@ -76,8 +70,9 @@ export default {
     }
   },
   watch: {},
-  created() {
-    this.$store.dispatch(this.$types.GET_CONSTANT)
+  created() {},
+  mounted() {
+    this.$store.dispatch(this.$types.GET_CONSTANT, 'Vuex.vue')
   },
   methods: {
     getUserName1() {

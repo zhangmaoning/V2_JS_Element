@@ -10,6 +10,13 @@ import DataArray from '@/Useing/DataArray'
 import Slot from '@/Useing/Slot'
 import TableComponentUser from '@/Useing/TableData';
 import FormComponentUser from '@/Useing/FormData';
+import MockDemo from '@/Useing/MockDemo';
+import CSS3Demo from '@/Useing/CSS3Demo';
+import CssFlexLayout from '@/Useing/CssFlexLayout';
+import CssMediaQuery from '@/Useing/CssMediaQuery';
+import FileUpload from '@/Useing/FileUpload';
+import DayJs from '@/Useing/DayJs';
+import Loading from "@/components/Loading.vue"
 Vue.use(Router)
 
 export default new Router({
@@ -55,11 +62,6 @@ export default new Router({
       component: Move2
     },
     {
-      path: '/MoveAwednd',
-      name: 'Move2',
-      component: Move2
-    },
-    {
       path: '/DataArray',
       name: 'DataArray',
       component: DataArray
@@ -73,6 +75,41 @@ export default new Router({
       path: '/FormComponentUser',
       name: 'FormComponentUser',
       component: FormComponentUser
+    },
+    {
+      path: '/MockDemo',
+      name: 'MockDemo',
+      component: MockDemo
+    },
+    {
+      path: '/CSS3Demo',
+      name: 'CSS3Demo',
+      component: CSS3Demo
+    },
+    {
+      path: '/CssFlexLayout',
+      name: 'CssFlexLayout',
+      component: CssFlexLayout 
+    },
+    {
+      path: '/CssMediaQuery',
+      name: 'CssMediaQuery',
+      component: CssMediaQuery 
+    },
+    {
+      path: '/FileUpload',
+      name: 'FileUpload',
+      component: FileUpload 
+    },
+    {
+      path: '/loading',
+      name: 'Loading',
+      component: Loading 
+    },
+    {
+      path: '/DayJs',
+      name: 'DayJs',
+      component: DayJs 
     },
 
   ]
